@@ -1,0 +1,109 @@
+/* Global font styles for a futuristic look */
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #0e0b16;
+  color: #e5e5e5;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  width: 100%;
+}
+
+h1, p {
+  margin-bottom: 2.7rem;
+  color: #e0e0e0;
+  width: 100%;
+  
+}
+
+
+.section-fx {
+  max-width: 100%;
+}
+
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8d99ae;
+  letter-spacing: 1.5px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: #a8dadc;
+  margin-left: 20px;
+  margin-right: 50px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffb703;
+  text-shadow: 0 0 5px #ffb703;
+}
+
+/* Advanced hover effect */
+.hover-fx {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-fx::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffb703;
+  transition: top 0.3s ease-in-out;
+}
+
+.hover-fx:hover::before {
+  top: 0;
+}
+
+/* Section hover effects */
+.section-fx {
+  border: 1px solid #03ffff;
+  padding: 20px;
+  margin: 20px 0;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section-fx:hover {
+  border-color: #040d5e;
+  box-shadow: 0 0 20px #888787;
+}
+
+/* Form input and button styling */
+.story-form input, .story-form button {
+  width: 50%;
+  margin: auto;
+}
+
+#submit-story {
+  background-color: #03144b;
+  border-color: #fdfdfd;
+}
+
+#submit-story:hover {
+  background-color: #39d2e6;
+  border-color: #39e6e6;
+}
+
+#error-msg {
+  font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+  background-color: #0e0b16;
+  color: #e5e5e5;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
