@@ -1,58 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&display=swap">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Redesign</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link hover-fx" href="dashboard.html">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hover-fx" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hover-fx" href="notifications.html">Notifications</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link hover-fx" href="settings.html">Settings</a>
-          </li>
-        </ul>
+    <!-- Horizontal Navbar -->
+    <div class="navbar">
+      <div class="navbar-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#news">News</a>
       </div>
+      <button class="create-btn">Create</button>
+  </div>
+  
+  
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Contacts</h3>
+            <ul>
+                <li>Henry</li>
+                <li>Vijay</li>
+                <li>Claire</li>
+                <li><a href="#">Show All</a></li>
+            </ul>
+            <button>+ New Contact</button>
+
+            <h3>Projects</h3>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li><a href="#">Show All</a></li>
+            </ul>
+            <button>+ New Project</button>
+
+            <h3>Albums</h3>
+            <ul>
+                <li>Album 1</li>
+                <li>Album 2</li>
+                <li><a href="#">Show All</a></li>
+            </ul>
+            <button>+ New Album</button>
+
+            <h3>Organizations</h3>
+            <ul>
+                <li>Organization 1</li>
+                <li>Organization 2</li>
+                <li><a href="#">Show All</a></li>
+            </ul>
+            <button>+ New Organization</button>
+        </aside>
+
+        <!-- Main Content / News Feed -->
+        <section class="main-content">
+            <h2>News Feed</h2>
+            <div class="feed-item">
+                <h3>Latest Tech News</h3>
+                <p>You can catch the latest tech news and updates on various gadgets such as smartphones, laptops, smartwatches, and gaming consoles from sources like The Hindu and Reuters. These platforms provide timely coverage and reviews on the newest technology trends and products.</p>
+                <button class="expand-btn">Expand</button>
+                <div class="additional-content" style="display: none;">
+                    <p>Additional content about the latest tech news goes here. It could provide more details, analysis, or insights on the topic.</p>
+                </div>
+                <form id="post-story-form">
+                    <textarea id="story" placeholder="Write your story here..."></textarea>
+                    <span id="error-message"></span> <!-- Error message for validation -->
+                    <button type="submit">Post Story</button>
+                </form>
+            </div>
+            <div class="feed-item">
+                <h3>Futuristic Design Trends</h3>
+                <p>Explore the latest trends in futuristic web design. From minimalist aesthetics to vibrant colors, design is evolving.</p>
+                <button class="expand-btn">Expand</button>
+                <div class="additional-content" style="display: none;">
+                    <p>This section can provide deeper insights into the design trends that are shaping the future of web aesthetics.</p>
+                </div>
+                <form id="post-story-form">
+                    <textarea id="story" placeholder="Write your story here..."></textarea>
+                    <span id="error-message"></span> <!-- Error message for validation -->
+                    <button type="submit">Post Story</button>
+                </form>
+            </div>
+            <div class="feed-item">
+                <h3>AI Breakthrough</h3>
+                <p>Discover how AI is revolutionizing industries globally, enhancing efficiency, and driving innovation.</p>
+                <button class="expand-btn">Expand</button>
+                <div class="additional-content" style="display: none;">
+                    <p>This area can elaborate on specific AI breakthroughs and their impact across various sectors.</p>
+                </div>
+                <form id="post-story-form">
+                    <textarea id="story" placeholder="Write your story here..."></textarea>
+                    <span id="error-message"></span> <!-- Error message for validation -->
+                    <button type="submit">Post Story</button>
+                </form>
+            </div>
+
+            <!-- Post a Story Section -->
+            <h2>Feedback</h2>
+            <form id="post-story-form">
+                <textarea id="story" placeholder="Any suggestions..."></textarea>
+                <span id="error-message"></span> <!-- Error message for validation -->
+                <button type="submit">Give Feedback</button>
+            </form>
+        </section>
     </div>
-  </nav>
 
-  <!-- Story submission form with validation -->
-  <section id="dashboard" class="container my-5 text-center section-fx">
-    <h1>Welcome to the Dashboard</h1>
-    <p>Submit your story below:</p>
-    <form id="story-form" class="story-form">
-      <label for="story">Enter a story (at least 3 characters):</label>
-      <input type="text" id="story" name="story" class="form-control" placeholder="Type your story here...">
-      <button type="submit" id="submit-story" class="btn btn-primary mt-3">Submit Story</button>
-    </form>
-    <p id="error-msg" class="text-danger mt-3"></p>
-  </section>
-
-  <footer class="bg-dark text-light text-center py-3">
-    <p>My Home &copy; 2024</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
